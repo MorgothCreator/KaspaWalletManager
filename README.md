@@ -29,7 +29,7 @@ I prefer in time to translate the BIP32 and all wallet core code from Qt to pure
 
 The mainwindow.cpp file has implemented some testing code for fast check of the correctitude of some functions in project.
 
-The project uses Qt 6.2.4 lib version but work with newer version as well, I prefer older to be compatible with older OS'es.
+The project uses Qt 6.2.4 lib version, I prefer older to be compatible with older OS'es.
 
 The code is little bit messy, but I usually create readable code..., as usually when the wallet will be functional the "cleanItUp()" human function will be activated :)
  
