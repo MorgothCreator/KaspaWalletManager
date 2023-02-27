@@ -33,3 +33,7 @@ The project uses Qt 6.2.4 lib version, I prefer older to be compatible with olde
 
 The code is little bit messy, but I usually create readable code..., as usually when the wallet will be functional the "cleanItUp()" human function will be activated :)
  
+
+If you like this work you can contribute with a donation to:
+
+* kaspa:qqca9tjcs067c70kg6fhy840uckkd5wqw9r8tppjd93e6jwpk4xmqlpywk9ld
