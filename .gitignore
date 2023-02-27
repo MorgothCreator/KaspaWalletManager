@@ -2,12 +2,13 @@
 *.slo
 *.lo
 *.o
-*.a
+!*.a
 *.la
 *.lai
 *.so
 *.so.*
 *.dll
+!*.dyld
 
 # Qt-es
 object_script.*.Release
@@ -65,4 +66,5 @@ KaspaWalletManager/KaspaWalletManager/lib/libgrpc/linux/
 KaspaWalletManager/KaspaWalletManager/lib/libprotobuf/android/
 KaspaWalletManager/KaspaWalletManager/lib/libprotobuf/linux/
 KaspaWalletManager/KaspaWalletManager/lib/libprotobuf/win64/
+_KaspaWalletManager/
 
