@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PageHistoryList</class>
+ <widget class="QWidget" name="PageHistoryList">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>310</width>
+    <height>85</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">	background: #FFFFFF;
+	color:#666666;
+</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>0</y>
+     <width>291</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">	border-style: solid;
+	border-radius: 5px;
+	border-width: 1px;
+	border-color: lightgrey;
+    padding-left: 4px;
+    padding-right: 4px;
+	icon-size:24px;</string>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <widget class="QPushButton" name="setupPushButton">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>10</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border-style: solid;
+	background-color: rgba(0, 0, 0, 0);
+	border-width: 1px;
+	border-radius: 5px;
+	border-color: transparent;
+}
+QPushButton:hover {
+    background-color: rgba(0, 0, 0, 24);
+}
+
+QPushButton:pressed {
+    background-color: rgba(0, 0, 0, 64);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="../../../../../res.qrc">
+      <normaloff>:/res/ic/res/ic/settings.png</normaloff>:/res/ic/res/ic/settings.png</iconset>
+    </property>
+   </widget>
+   <widget class="QLabel" name="transactionIdLabel">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>5</y>
+      <width>281</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-color: transparent;
+</string>
+    </property>
+    <property name="text">
+     <string>Transaction ID:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="transactionIdValueLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>19</y>
+      <width>271</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-color: transparent;
+</string>
+    </property>
+    <property name="text">
+     <string>transactionIdValue</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::AutoText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+    <property name="wordWrap">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="amountLabel">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>45</y>
+      <width>281</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-color: transparent;
+</string>
+    </property>
+    <property name="text">
+     <string>Amount:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="amountValueLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>59</y>
+      <width>161</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-color: transparent;
+</string>
+    </property>
+    <property name="text">
+     <string>amountValue</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::AutoText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+    <property name="wordWrap">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="amountValueUsdLabel">
+    <property name="geometry">
+     <rect>
+      <x>165</x>
+      <y>59</y>
+      <width>121</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-color: transparent;
+</string>
+    </property>
+    <property name="text">
+     <string>amountValueUSD</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::AutoText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+    <property name="wordWrap">
+     <bool>false</bool>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../../../../../res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

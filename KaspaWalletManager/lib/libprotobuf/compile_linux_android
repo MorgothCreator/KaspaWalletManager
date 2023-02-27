@@ -1,0 +1,75 @@
+mkdir armnn-devenv
+cd armnn-devenv/
+sudo apt install crossbuild-essential-arm64
+sudo apt install libssl-dev
+wget https://github.com/Kitware/CMake/releases/download/v3.25.2/cmake-3.25.2.tar.gz
+tar -zxvf cmake-3.25.2.tar.gz 
+cd cmake-3.25.2/
+./bootstrap --prefix=$HOME/armnn-devenv/cmake/install
+make all install
+cd ..
+
+
+git clone -b v3.19.4 https://github.com/google/protobuf.git protobuf
+cd protobuf/
+git submodule update --init --recursive
+./autogen.sh
+mkdir x86_64_build
+cd x86_64_build/
+../configure  --prefix=$HOME/armnn-devenv/google/x86_64_pb_install
+make install -j8
+mkdir arm64_build
+cd arm64_build/
+CC=aarch64-linux-gnu-gcc CXX=aarch64-linux-gnu-g++ ../configure --host=aarch64-linux --prefix=$HOME/armnn-devenv/google/arm64_pb_install --with-protoc=$HOME/armnn-devenv/google/x86_64_pb_install/bin/protoc
+sudo make install -j8
+
+git clone --recurse-submodules -b v1.46.6 https://github.com/grpc/grpc
+cd grpc/
+git submodule update --init
+mkdir -p cmake/build_x86
+pushd cmake/build_x86
+cmake -DgRPC_INSTALL=ON -DgRPC_BUILD_TESTS=OFF -DCMAKE_INSTALL_PREFIX=$HOME/armnn-devenv/google/x86_64_pb_install ../..
+make -j8
+make install
+popd
+
+mkdir -p cmake/build_aarm64
+pushd cmake/build_aarm64
+CC=aarch64-linux-gnu-gcc CXX=aarch64-linux-gnu-g++
+cmake -DCMAKE_SYSTEM_PROCESSOR=aarch64 -DgRPC_INSTALL=ON -DgRPC_BUILD_TESTS=OFF -DCMAKE_INSTALL_PREFIX=$HOME/armnn-devenv/google/x86_64_pb_install ../..
+make -j8
+make install
+popd
+
+
+
+
+
+
+
+cd <your build directory>
+export ANDROID_NDK=/home/morgoth/Android/Sdk/ndk/23.1.7779620
+cmake /home/morgoth/armnn-devenv/grpc/grpc \
+ -DCMAKE_TOOLCHAIN_FILE=${ANDROID_NDK}/build/cmake/android.toolchain.cmake \
+ -DANDROID_ABI=arm64-v8a \
+ -DANDROID_PLATFORM=android-25 \
+ -DANDROID_STL=c++_static \
+ -DRUN_HAVE_STD_REGEX=0 \
+ -DRUN_HAVE_POSIX_REGEX=0 \
+ -DRUN_HAVE_STEADY_CLOCK=0 \
+ -DCMAKE_BUILD_TYPE=Release
+cmake --build . --target grpc++
+
+cd <your build directory>
+export ANDROID_NDK=/home/morgoth/Android/Sdk/ndk/23.1.7779620
+cmake /home/morgoth/armnn-devenv/protobuf/arm64_build \
+ -DCMAKE_INSTALL_PREFIX=/home/morgoth/armnn-devenv/protobuf \
+ -DCMAKE_TOOLCHAIN_FILE=${ANDROID_NDK}/build/cmake/android.toolchain.cmake \
+ -DANDROID_ABI=arm64-v8a \
+ -DANDROID_PLATFORM=android-25 \
+ -DANDROID_STL=c++_static \
+ -DRUN_HAVE_STD_REGEX=0 \
+ -DRUN_HAVE_POSIX_REGEX=0 \
+ -DRUN_HAVE_STEADY_CLOCK=0 \
+ -DCMAKE_BUILD_TYPE=Release
+cmake --build . --target grpc++

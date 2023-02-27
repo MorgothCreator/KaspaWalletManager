@@ -8,7 +8,6 @@
 *.so
 *.so.*
 *.dll
-*.dylib
 
 # Qt-es
 object_script.*.Release
@@ -52,3 +51,18 @@ compile_commands.json
 *creator.user*
 
 *_qmlcache.qrc
+
+.DS_Store
+android_release.keystore
+KaspaWalletManager_Android/
+KaspaWalletManager_iOS/
+KaspaWalletManager_Linux/
+KaspaWalletManager_Windows/
+Releases/
+KaspaWalletManager/KaspaWalletManager/lib/common/linux/
+KaspaWalletManager/KaspaWalletManager/lib/libgrpc/android/
+KaspaWalletManager/KaspaWalletManager/lib/libgrpc/linux/
+KaspaWalletManager/KaspaWalletManager/lib/libprotobuf/android/
+KaspaWalletManager/KaspaWalletManager/lib/libprotobuf/linux/
+KaspaWalletManager/KaspaWalletManager/lib/libprotobuf/win64/
+

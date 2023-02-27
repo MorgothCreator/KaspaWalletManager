@@ -1,0 +1,127 @@
+Install grpc:
+
+export INSTALL_DIR=$HOME/.local
+mkdir -p $INSTALL_DIR
+export PATH="$INSTALL_DIR/bin:$PATH"
+git clone --recurse-submodules -b v1.46.6 https://github.com/grpc/grpc
+cd grpc
+git submodule update --init
+mkdir -p cmake/build
+pushd cmake/build
+cmake -DgRPC_INSTALL=ON -DgRPC_BUILD_TESTS=OFF -DCMAKE_INSTALL_PREFIX=$INSTALL_DIR ../..
+make -j8
+make install
+popd
+
+Install protobuf by version:
+
+wget https://github.com/google/protobuf/releases/download/v3.19.4/protobuf-3.19.4.tar.bz2
+tar xvf protobuf-cpp-3.19.4.tar.gz
+cd protobuf-3.19.4
+MacoOs:
+./configure CC=clang CXX=clang++ CXXFLAGS='-std=c++11 -stdlib=libc++ -O3 -g' LDFLAGS='-stdlib=libc++' LIBS="-lc++ -lc++abi"
+Linux:
+./configure CXXFLAGS='-std=c++11'
+
+make -j 8 
+sudo make install
+protoc --version
+
+Build .proto files:
+
+$ protoc -I=. --cpp_out=. sample.proto
+$ protoc -I=. --grpc_out=. --plugin=protoc-gen-grpc=/usr/local/bin/grpc_cpp_plugin sample.proto
+
+
+Linux absl install/comile:
+cmake -std=c++17 -DCMAKE_POSITION_INDEPENDENT_CODE=TRUE -DABSL_PROPAGATE_CXX_STD=TRUE -DBUILD_TESTING=OFF .
+
+Create a bundle of dependencies:
+
+libabsl.a
+libabsl_bad_any_cast_impl.a
+libabsl_bad_optional_access.a
+libabsl_bad_variant_access.a
+libabsl_base.a
+libabsl_city.a
+libabsl_civil_time.a
+libabsl_cord.a
+libabsl_cord_internal.a
+libabsl_cordz_functions.a
+libabsl_cordz_handle.a
+libabsl_cordz_info.a
+libabsl_cordz_sample_token.a
+libabsl_debugging_internal.a
+libabsl_demangle_internal.a
+libabsl_examine_stack.a
+libabsl_exponential_biased.a
+libabsl_failure_signal_handler.a
+libabsl_flags.a
+libabsl_flags_commandlineflag.a
+libabsl_flags_commandlineflag_internal.a
+libabsl_flags_config.a
+libabsl_flags_internal.a
+libabsl_flags_marshalling.a
+libabsl_flags_parse.a
+libabsl_flags_private_handle_accessor.a
+libabsl_flags_program_name.a
+libabsl_flags_reflection.a
+libabsl_flags_usage.a
+libabsl_flags_usage_internal.a
+libabsl_graphcycles_internal.a
+libabsl_hash.a
+libabsl_hashtablez_sampler.a
+libabsl_int128.a
+libabsl_leak_check.a
+libabsl_leak_check_disable.a
+libabsl_log_severity.a
+libabsl_low_level_hash.a
+libabsl_malloc_internal.a
+libabsl_periodic_sampler.a
+libabsl_random_distributions.a
+libabsl_random_internal_distribution_test_util.a
+libabsl_random_internal_platform.a
+libabsl_random_internal_pool_urbg.a
+libabsl_random_internal_randen.a
+libabsl_random_internal_randen_hwaes.a
+libabsl_random_internal_randen_hwaes_impl.a
+libabsl_random_internal_randen_slow.a
+libabsl_random_internal_seed_material.a
+libabsl_random_seed_gen_exception.a
+libabsl_random_seed_sequences.a
+libabsl_raw_hash_set.a
+libabsl_raw_logging_internal.a
+libabsl_scoped_set_env.a
+libabsl_spinlock_wait.a
+libabsl_stacktrace.a
+libabsl_status.a
+libabsl_statusor.a
+libabsl_strerror.a
+libabsl_str_format_internal.a
+libabsl_strings.a
+libabsl_strings_internal.a
+libabsl_symbolize.a
+libabsl_synchronization.a
+libabsl_throw_delegate.a
+libabsl_time.a
+libabsl_time_zone.a
+libaddress_sorting.a
+libcares.a
+libcrypto.a
+libgpr.a
+libgrpc.a
+libgrpc++.a
+libgrpc++_alts.a
+libgrpc++_error_details.a
+libgrpc_plugin_support.a
+libgrpcpp_channelz.a
+libgrpc++_reflection.a
+libgrpc++_unsecure.a
+libgrpc_unsecure.a
+libre2.a
+libssl.a
+libupb.a
+libz.a
+
+Gather all libs in one:
+ar -rcT libabsl.a *.a

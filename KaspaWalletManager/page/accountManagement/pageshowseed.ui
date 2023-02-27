@@ -1,0 +1,894 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PageShowSeed</class>
+ <widget class="QWidget" name="PageShowSeed">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>310</width>
+    <height>595</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #FCD535;</string>
+  </property>
+  <widget class="QFrame" name="ShowSeedFrame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>310</width>
+     <height>595</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QPushButton" name="backPushButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="mouseTracking">
+     <bool>true</bool>
+    </property>
+    <property name="tabletTracking">
+     <bool>true</bool>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border-style: solid;
+	background-color: rgba(255, 255, 255, 16);
+	border-radius: 5px;
+	border-width: 1px;
+	border-color: rgb(235, 235, 235);
+	color: black;
+}
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 64);
+}
+
+QPushButton:pressed {
+    background-color: rgba(255, 255, 255, 128);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="../../res.qrc">
+      <normaloff>:/res/ic/res/ic/arowLeft.png</normaloff>:/res/ic/res/ic/arowLeft.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>16</width>
+      <height>16</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="word01LineEdit">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>90</y>
+      <width>131</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="tabletTracking">
+     <bool>true</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	border-style: solid;
+	background-color: rgba(255, 255, 255, 16);
+	border-radius: 5px;
+	border-width: 1px;
+	border-color: rgb(235, 235, 235);
+	color: black;
+    padding-left: 4px;
+    padding-right: 4px;	
+}
+QLineEdit[text=&quot;&quot;]{ 
+	color:gray;
+ }
+</string>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhPreferLowercase</set>
+    </property>
+    <property name="inputMask">
+     <string/>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="placeholderText">
+     <string/>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="headerLabel">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>55</y>
+      <width>311</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>22</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+background-color: #FCD535;
+color: #474D57;
+}</string>
+    </property>
+    <property name="text">
+     <string>Show SEED</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="nextPushButton">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>320</y>
+      <width>191</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="tabletTracking">
+     <bool>true</bool>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border-style: solid;
+	background-color: rgba(255, 255, 255, 16);
+	border-radius: 5px;
+	border-width: 1px;
+	border-color: rgb(235, 235, 235);
+	color: black;
+}
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 64);
+}
+
+QPushButton:pressed {
+    background-color: rgba(255, 255, 255, 128);
+}</string>
+    </property>
+    <property name="text">
+     <string>NEXT...</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="word02LineEdit">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>90</y>
+      <width>131</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="tabletTracking">
+     <bool>true</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	border-style: solid;
+	background-color: rgba(255, 255, 255, 16);
+	border-radius: 5px;
+	border-width: 1px;
+	border-color: rgb(235, 235, 235);
+	color: black;
+    padding-left: 4px;
+    padding-right: 4px;	
+}
+QLineEdit[text=&quot;&quot;]{ 
+	color:gray;
+ }
+</string>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhPreferLowercase</set>
+    </property>
+    <property name="inputMask">
+     <string/>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="placeholderText">
+     <string/>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="word03LineEdit">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>120</y>
+      <width>131</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="tabletTracking">
+     <bool>true</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	border-style: solid;
+	background-color: rgba(255, 255, 255, 16);
+	border-radius: 5px;
+	border-width: 1px;
+	border-color: rgb(235, 235, 235);
+	color: black;
+    padding-left: 4px;
+    padding-right: 4px;	
+}
+QLineEdit[text=&quot;&quot;]{ 
+	color:gray;
+ }
+</string>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhPreferLowercase</set>
+    </property>
+    <property name="inputMask">
+     <string/>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="placeholderText">
+     <string/>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="word04LineEdit">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>120</y>
+      <width>131</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="tabletTracking">
+     <bool>true</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	border-style: solid;
+	background-color: rgba(255, 255, 255, 16);
+	border-radius: 5px;
+	border-width: 1px;
+	border-color: rgb(235, 235, 235);
+	color: black;
+    padding-left: 4px;
+    padding-right: 4px;	
+}
+QLineEdit[text=&quot;&quot;]{ 
+	color:gray;
+ }
+</string>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhPreferLowercase</set>
+    </property>
+    <property name="inputMask">
+     <string/>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="placeholderText">
+     <string/>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="word05LineEdit">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>150</y>
+      <width>131</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="tabletTracking">
+     <bool>true</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	border-style: solid;
+	background-color: rgba(255, 255, 255, 16);
+	border-radius: 5px;
+	border-width: 1px;
+	border-color: rgb(235, 235, 235);
+	color: black;
+    padding-left: 4px;
+    padding-right: 4px;	
+}
+QLineEdit[text=&quot;&quot;]{ 
+	color:gray;
+ }
+</string>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhPreferLowercase</set>
+    </property>
+    <property name="inputMask">
+     <string/>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="placeholderText">
+     <string/>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="word06LineEdit">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>150</y>
+      <width>131</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="tabletTracking">
+     <bool>true</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	border-style: solid;
+	background-color: rgba(255, 255, 255, 16);
+	border-radius: 5px;
+	border-width: 1px;
+	border-color: rgb(235, 235, 235);
+	color: black;
+    padding-left: 4px;
+    padding-right: 4px;	
+}
+QLineEdit[text=&quot;&quot;]{ 
+	color:gray;
+ }
+</string>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhPreferLowercase</set>
+    </property>
+    <property name="inputMask">
+     <string/>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="placeholderText">
+     <string/>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="word07LineEdit">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>180</y>
+      <width>131</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="tabletTracking">
+     <bool>true</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	border-style: solid;
+	background-color: rgba(255, 255, 255, 16);
+	border-radius: 5px;
+	border-width: 1px;
+	border-color: rgb(235, 235, 235);
+	color: black;
+    padding-left: 4px;
+    padding-right: 4px;	
+}
+QLineEdit[text=&quot;&quot;]{ 
+	color:gray;
+ }
+</string>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhPreferLowercase</set>
+    </property>
+    <property name="inputMask">
+     <string/>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="placeholderText">
+     <string/>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="word08LineEdit">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>180</y>
+      <width>131</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="tabletTracking">
+     <bool>true</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	border-style: solid;
+	background-color: rgba(255, 255, 255, 16);
+	border-radius: 5px;
+	border-width: 1px;
+	border-color: rgb(235, 235, 235);
+	color: black;
+    padding-left: 4px;
+    padding-right: 4px;	
+}
+QLineEdit[text=&quot;&quot;]{ 
+	color:gray;
+ }
+</string>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhPreferLowercase</set>
+    </property>
+    <property name="inputMask">
+     <string/>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="placeholderText">
+     <string/>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="word09LineEdit">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>210</y>
+      <width>131</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="tabletTracking">
+     <bool>true</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	border-style: solid;
+	background-color: rgba(255, 255, 255, 16);
+	border-radius: 5px;
+	border-width: 1px;
+	border-color: rgb(235, 235, 235);
+	color: black;
+    padding-left: 4px;
+    padding-right: 4px;	
+}
+QLineEdit[text=&quot;&quot;]{ 
+	color:gray;
+ }
+</string>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhPreferLowercase</set>
+    </property>
+    <property name="inputMask">
+     <string/>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="placeholderText">
+     <string/>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="word10LineEdit">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>210</y>
+      <width>131</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="tabletTracking">
+     <bool>true</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	border-style: solid;
+	background-color: rgba(255, 255, 255, 16);
+	border-radius: 5px;
+	border-width: 1px;
+	border-color: rgb(235, 235, 235);
+	color: black;
+    padding-left: 4px;
+    padding-right: 4px;	
+}
+QLineEdit[text=&quot;&quot;]{ 
+	color:gray;
+ }
+</string>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhPreferLowercase</set>
+    </property>
+    <property name="inputMask">
+     <string/>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="placeholderText">
+     <string/>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="word11LineEdit">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>240</y>
+      <width>131</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="tabletTracking">
+     <bool>true</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	border-style: solid;
+	background-color: rgba(255, 255, 255, 16);
+	border-radius: 5px;
+	border-width: 1px;
+	border-color: rgb(235, 235, 235);
+	color: black;
+    padding-left: 4px;
+    padding-right: 4px;	
+}
+QLineEdit[text=&quot;&quot;]{ 
+	color:gray;
+ }
+</string>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhPreferLowercase</set>
+    </property>
+    <property name="inputMask">
+     <string/>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="placeholderText">
+     <string/>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="word12LineEdit">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>240</y>
+      <width>131</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="tabletTracking">
+     <bool>true</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	border-style: solid;
+	background-color: rgba(255, 255, 255, 16);
+	border-radius: 5px;
+	border-width: 1px;
+	border-color: rgb(235, 235, 235);
+	color: black;
+    padding-left: 4px;
+    padding-right: 4px;	
+}
+QLineEdit[text=&quot;&quot;]{ 
+	color:gray;
+ }
+</string>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhPreferLowercase</set>
+    </property>
+    <property name="inputMask">
+     <string/>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="placeholderText">
+     <string/>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="copyAllPushButton">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>280</y>
+      <width>191</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="tabletTracking">
+     <bool>true</bool>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border-style: solid;
+	background-color: rgba(255, 255, 255, 16);
+	border-radius: 5px;
+	border-width: 1px;
+	border-color: rgb(235, 235, 235);
+	color: black;
+}
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 64);
+}
+
+QPushButton:pressed {
+    background-color: rgba(255, 255, 255, 128);
+}</string>
+    </property>
+    <property name="text">
+     <string>COPY ALL TO CLIPBOARD</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../../res.qrc"/>
+ </resources>
+ <connections/>
+</ui>
