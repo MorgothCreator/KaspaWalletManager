@@ -36,6 +36,6 @@ The code is little bit messy, but I usually create readable code..., as usually 
 
 If you like this work you can contribute with a donation to:
 
-* kaspa:qqca9tjcs067c70kg6fhy840uckkd5wqw9r8tppjd93e6jwpk4xmqlpywk9ld
+* kaspa:qp8h0cnujrhhswm384xpspjlfg7v3yg3ntf6cjhld5vgl6p4aqntk6v00qyn8
 
 ![page](https://raw.githubusercontent.com/MorgothCreator/KaspaWalletManager/main/resources/printScreen.png)
